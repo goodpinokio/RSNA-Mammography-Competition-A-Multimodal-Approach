@@ -27,7 +27,7 @@ print('New Data Size:', DF_train.shape[0])
 print(DF_train.value_counts())
 ```
 
-# 이미지 크롭
+## 이미지 크롭
 원본 이미지는 512*512 사이즈이다.
 유방과 관련이 없는 데이터도 같이 들어있다.
 그래서 글쓴이는 Kmeans와 roi 추출을 사용해서 유방부분만 크롭했다.
@@ -59,7 +59,7 @@ def kmeans_set_zero(img, dsize=(320,512), num_clusters=4):
 
 ```
 
-# ROI 추출
+## ROI 추출
 이미지에서 각 행과 열의 합을 계산하고, 이 값이 일정 임계값보다 큰 부분만 선택합니다. 
 이 방법을 통해 이미지에서 의미 있는 부분을 잘라낼 수 있습니다. 
 사용되는 임계값은 이미지 전체 픽셀 값의 합의 평균입니다.
@@ -90,7 +90,7 @@ def extraxtor_from_roi_box(d, frame, dsize=(512, 320), num_clusters=4):
 
 ```
 
-# 이미지 크기 조절 
+## 이미지 크기 조절 
 마지막으로, 모든 이미지는 동일한 크기 (예: 320x512)로 조정됩니다. 
 이 단계는 모델에 입력될 이미지의 크기를 통일하는 데 필요합니다.
 
@@ -181,7 +181,7 @@ model = Model(inputs=[image_input, structured_input], outputs=output)
 model.compile(loss='binary_crossentropy', optimizer=Adam(), metrics=['accuracy'])
 ```
 
-# 모델 학습
+## 모델 학습
 이제 우리는 학습 데이터와 타겟 값을 사용하여 모델을 학습시킬 수 있습니다. 
 학습 과정에서는 검증 데이터도 사용하여 학습이 잘 이루어지고 있는지를 확인합니다.
 
@@ -190,7 +190,7 @@ code
 history = model.fit([train_images, train_structured_data], train_target, validation_split=0.2, epochs=10, batch_size=32)
 ```
 
-# 학습 결과 평가
+## 학습 결과 평가
 학습이 끝난 후에는 테스트 데이터를 사용하여 모델의 성능을 평가합니다. 
 테스트 데이터에 대한 예측 값을 실제 값과 비교하여 정확도를 계산하고, 이를 출력합니다.
 
@@ -206,7 +206,7 @@ img
 이렇게 학습한 모델을 사용하니, 테스트 정확도가 0.8039로 상당히 높게 나왔습니다. 
 이는 학습 데이터에 'laterality'와 'view' 정보를 추가로 포함함으로써 모델의 성능이 크게 향상되었음을 보여줍니다.
 
-# 결과 시각화
+## 결과 시각화
 또한, 학습 과정에서의 정확도와 손실 값의 변화를 시각화하여 학습이 어떻게 진행되었는지 확인할 수 있습니다.
 
 code
