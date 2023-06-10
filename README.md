@@ -99,7 +99,7 @@ code
 crop = cv2.resize(crop, dsize=dsize, interpolation=cv2.INTER_LINEAR)
 ```
 
-# 멀티 모달 학습을 위한 원핫 인코딩
+# 멀티 모달 학습을 위한 (One-Hot Encoding)
 사람의 두 눈은 같은 장면을 약간 다른 각도에서 보기 때문에 공간 인식에 도움을 줍니다. 
 마찬가지로 유방암 진단에서도 여러 각도에서 촬영한 이미지를 동시에 사용하여 학습하면 정확도를 높일 수 있습니다.
 
@@ -145,9 +145,9 @@ train_images = np.array([load_and_process_image(img_path) for img_path in train_
 test_images = np.array([load_and_process_image(img_path) for img_path in test_image_paths])
 ```
 
-# 멀티 모달 학습을 위한 모델 설계
-우리는 두 개의 다른 종류의 입력을 받을 수 있는 모델을 만듭니다. 하나는 이미지 데이터를 처리하는 컨볼루션 신경망(CNN) 부분이고, 다른 하나는 원핫 인코딩된 'laterality'와 'view' 정보를 처리하는 완전 연결 계층(Dense layer)입니다.
-
+## 멀티 모달 학습을 위한 모델 설계
+우리는 두 개의 다른 종류의 입력을 받을 수 있는 모델을 만듭니다. 하나는 이미지 데이터를 처리하는 컨볼루션 신경망(CNN) 부분이고, 
+다른 하나는 원핫 인코딩된 'laterality'와 'view' 정보를 처리하는 완전 연결 계층(Dense layer)입니다.
 이 두 부분은 각각 처리된 후에 결합(concatenate)되어 최종 출력을 생성합니다.
 
 code
