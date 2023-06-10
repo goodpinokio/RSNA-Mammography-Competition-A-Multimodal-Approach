@@ -248,6 +248,10 @@ plt.ylabel('loss')
 plt.show()
 ```
 
+ROC Graph
+
+<img src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/1485bd6f-5faa-4087-ac5d-68fd6558e792">
+
 Train VS Val_Accuracy Graph
 Train VS Val_Loss Graph
 
