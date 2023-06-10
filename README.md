@@ -239,6 +239,9 @@ plt.ylabel('loss')
 
 plt.show()
 ```
+img
+
+<img src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/1a79346c-2bcf-4e7a-9967-0337e8a5b241">
 
 이 외에도, 모델의 성능을 평가하는 여러 가지 방법들이 있습니다. 
 ROC 곡선을 그려 모델의 성능을 시각적으로 확인하거나, 혼동 행렬(confusion matrix)를 사용하여 실제 값과 예측 값의 관계를 확인하는 것이 일반적입니다.
