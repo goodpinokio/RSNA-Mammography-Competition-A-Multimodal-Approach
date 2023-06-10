@@ -2,12 +2,12 @@
 이 문서는 유방암 데이터셋의 전처리 과정과 이미지의 크롭(crop) 과정, 그리고 멀티 모달 학습을 설명합니다.
 
 ## 데이터 수집
-캐글에서 dicom이미지를 png로 바꾼 데이터를 이용했다 
+캐글에서 dicom이미지를 png로 바꾼 데이터를 이용했습니다.
 
 [Kaggle_RSNA_512x512_pngs](https://www.kaggle.com/code/rofydamarey/resnet50v2-tensorflow-and-rsna-mammography/input)
 
 그리고 RSNA Screening Mammography Breast Cancer Detection
-여기서 train.csv를 이용해서 학습을 진행했다.
+여기서 train.csv를 이용해서 학습을 진행했습니다.
 
 [Kaggle_RSNA_CBISM](https://www.kaggle.com/competitions/rsna-breast-cancer-detection/overview)
 ***
@@ -41,9 +41,9 @@ print(DF_train.value_counts())
 ```
 
 ## 이미지 크롭
-원본 이미지는 512*512 사이즈이다.
-유방과 관련이 없는 데이터도 같이 들어있다.
-그래서 글쓴이는 Kmeans와 roi 추출을 사용해서 유방부분만 크롭했다.
+원본 이미지는 512*512 사이즈입니다.
+유방과 관련이 없는 데이터도 같이 들어있습니다.
+그래서 글쓴이는 Kmeans와 roi 추출을 사용해서 유방부분만 크롭했습니다.
 원본 이미지(512*512)는 각 픽셀의 값을 기준으로 K-평균 클러스터링을 통해 여러 그룹으로 분류됩니다.
 가장 어두운 클러스터는 배경 노이즈로 가정되어 값이 0으로 설정되어 이미지의 노이즈를 줄입니다.
 
