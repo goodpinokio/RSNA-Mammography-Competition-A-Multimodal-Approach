@@ -3,11 +3,16 @@
 
 ## 데이터 수집
 캐글에서 dicom이미지를 png로 바꾼 데이터를 이용했다 
-(https://www.kaggle.com/code/rofydamarey/resnet50v2-tensorflow-and-rsna-mammography/input)
+
+[Kaggle_RSNA_512x512_pngs](https://www.kaggle.com/code/rofydamarey/resnet50v2-tensorflow-and-rsna-mammography/input)
 
 그리고 RSNA Screening Mammography Breast Cancer Detection
 여기서 train.csv를 이용해서 학습을 진행했다.
-(https://www.kaggle.com/competitions/rsna-breast-cancer-detection/overview)
+
+[Kaggle_RSNA_CBISM](https://www.kaggle.com/competitions/rsna-breast-cancer-detection/overview)
+***
+site_id, patient_id, image_id, laterality, view, age, cancer, biopsy, invasive, BIRADS, implant, density, machine_id 
+***
 
 ## 데이터 전처리
 데이터 전처리 단계는 딥러닝 프로젝트에서 중요한 단계로, 입력 데이터의 품질과 모델의 성능에 큰 영향을 미칩니다. 
