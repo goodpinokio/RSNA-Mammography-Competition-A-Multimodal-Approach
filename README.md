@@ -199,7 +199,10 @@ code
 test_loss, test_acc = model.evaluate([test_images, test_structured_data], test_target)
 print("Test accuracy:", test_acc)
 ```
-
+img
+<img src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/27ad1976-a002-4d89-a42f-2342924e82da"
+ width="300" height="400">
+ 
 이렇게 학습한 모델을 사용하니, 테스트 정확도가 0.8039로 상당히 높게 나왔습니다. 
 이는 학습 데이터에 'laterality'와 'view' 정보를 추가로 포함함으로써 모델의 성능이 크게 향상되었음을 보여줍니다.
 
