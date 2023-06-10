@@ -5,7 +5,7 @@
 데이터 전처리 단계는 딥러닝 프로젝트에서 중요한 단계로, 입력 데이터의 품질과 모델의 성능에 큰 영향을 미칩니다. 
 여기서 우리는 biopsy 값이 1인 데이터만을 선택하여 새로운 DataFrame을 생성합니다. biopsy 값이 1인 것을 기준으로 하는 이유는, 의료 데이터에서 biopsy는 조직 검사를 의미하며, 이 값이 1일 때는 보통 병세(여기서는 유방암)가 발견된 경우를 의미합니다.
 
-''' 
+'''python
 import pandas as pd
 
 data_input = pd.read_csv('train_data.csv')
