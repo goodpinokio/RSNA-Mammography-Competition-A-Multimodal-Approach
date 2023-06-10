@@ -247,10 +247,14 @@ plt.ylabel('loss')
 
 plt.show()
 ```
-img
+
+Train VS Val_Accuracy Graph
+Train VS Val_Loss Graph
 
 <img src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/1a79346c-2bcf-4e7a-9967-0337e8a5b241">
 
-이 외에도, 모델의 성능을 평가하는 여러 가지 방법들이 있습니다. 
-ROC 곡선을 그려 모델의 성능을 시각적으로 확인하거나, 혼동 행렬(confusion matrix)를 사용하여 실제 값과 예측 값의 관계를 확인하는 것이 일반적입니다.
-이들을 통해 모델의 성능을 좀 더 자세히 이해하고, 필요한 경우 모델을 개선하는 데 도움이 될 수 있습니다.
+Confusion Matrix
+
+<img src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/9d467405-cff3-484a-acf8-5a7230d33e16">
+
+
