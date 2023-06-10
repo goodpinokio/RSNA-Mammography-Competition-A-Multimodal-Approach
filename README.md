@@ -217,36 +217,7 @@ img
 ## 결과 시각화
 또한, 학습 과정에서의 정확도와 손실 값의 변화를 시각화하여 학습이 어떻게 진행되었는지 확인할 수 있습니다.
 
-code
-```python
-import matplotlib.pyplot as plt
-
-accuracy = history.history['accuracy']
-val_accuracy = history.history['val_accuracy']
-loss = history.history['loss']
-val_loss = history.history['val_loss']
-
-plt.figure(figsize = (15,10))
-
-plt.subplot(2, 2, 1)
-plt.plot(accuracy, label = "Training Accuracy")
-plt.plot(val_accuracy, label = "Validation Accuracy")
-plt.ylim(0.4, 1)
-plt.legend(['Train', 'Validation'], loc = 'upper left')
-plt.title("Training vs Validation Accuracy")
-plt.xlabel('epoch')
-plt.ylabel('accuracy')
-
-plt.subplot(2, 2, 2)
-plt.plot(loss, label = "Training Loss")
-plt.plot(val_loss, label = "Validation Loss")
-plt.legend(['Train', 'Validation'], loc = 'upper left')
-plt.title("Training vs Validation Loss")
-plt.xlabel('epoch')
-plt.ylabel('loss')
-
-plt.show()
-```
+IMAGE
 
 ROC Graph
 
