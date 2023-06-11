@@ -47,6 +47,10 @@ print(DF_train.value_counts())
 원본 이미지(512*512)는 각 픽셀의 값을 기준으로 K-평균 클러스터링을 통해 여러 그룹으로 분류됩니다.
 가장 어두운 클러스터는 배경 노이즈로 가정되어 값이 0으로 설정되어 이미지의 노이즈를 줄입니다.
 
+original image
+
+<image src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/aca52d9e-1296-4a9c-8977-7a3daae07358">
+
 code
 ```python
 def kmeans_set_zero(img, dsize=(320,512), num_clusters=4):
@@ -111,6 +115,9 @@ code
 ```python
 crop = cv2.resize(crop, dsize=dsize, interpolation=cv2.INTER_LINEAR)
 ```
+cropped image
+    
+<image src="https://github.com/goodpinokio/RSNA-Mammography-Competition-A-Multimodal-Approach/assets/73101224/691877d2-50fd-4415-865d-11d250847dd4">
 
 # 멀티 모달 학습을 위한 (One-Hot Encoding)
 사람의 두 눈은 같은 장면을 약간 다른 각도에서 보기 때문에 공간 인식에 도움을 줍니다. 
